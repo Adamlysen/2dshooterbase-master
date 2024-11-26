@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d1d160c2098979540bc6bd5f47315e61
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - boltprefab: {fileID: 1287502262990996, guid: 4dd15c7fe51711c48ba135fef149bbf8,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

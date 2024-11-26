@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1cba56c6fcff2d740830730951f5d5db
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Boltprefab: {fileID: 1287502262990996, guid: 4dd15c7fe51711c48ba135fef149bbf8,
+      type: 3}
+  - GunPosition: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
