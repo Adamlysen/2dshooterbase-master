@@ -20,7 +20,7 @@ public class ShipController : MonoBehaviour
 
     Transform GunPosition;
 
-    float timeBetweenShots = 0.25f;
+    public float timeBetweenShots = 0.25f;
     float timeSinceLastShot = 0;
 
     [SerializeField]
@@ -86,6 +86,14 @@ public class ShipController : MonoBehaviour
             {
                 SceneManager.LoadScene(2);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Power")
+        {
+            
         }
     }
 

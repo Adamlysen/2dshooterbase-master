@@ -417,6 +417,7 @@ MonoBehaviour:
   Boltprefab: {fileID: 1287502262990996, guid: 4dd15c7fe51711c48ba135fef149bbf8, type: 3}
   GunPosition: {fileID: 1438924084}
   maxHealth: 10
+  currentHealth: 0
   hpBar: {fileID: 1629327405}
   scoretext: {fileID: 1910504464}
   currentScore: 0
@@ -1243,6 +1244,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1775952828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1775952830}
+  - component: {fileID: 1775952829}
+  m_Layer: 0
+  m_Name: GunBoostSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1775952829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775952828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b34c3227f63c04ca866e64b5eb0279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GunBooster: {fileID: 1287502262990996, guid: 8d9ef6517801fec4e8c778855293221b, type: 3}
+  GunBoostSpawner: {fileID: 1775952830}
+--- !u!4 &1775952830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775952828}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: -16.46}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910504462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,3 +1509,4 @@ SceneRoots:
   - {fileID: 1660192554}
   - {fileID: 1548893634}
   - {fileID: 57348615}
+  - {fileID: 1775952830}

@@ -45,9 +45,9 @@ public class EnemySpawnController : MonoBehaviour
         }
         else if (timeSinceLastSpawn > timeBetweenSpawn && player.GetComponent<ShipController>().currentScore >= 50)
         {
-            timeBetweenSpawn = 0.5f;
+            timeBetweenSpawn = 0.2f;
             timeSinceLastSpawn = 0;
-            LevelText.SetText("Level 3");
+            LevelText.SetText("Boss Level");
             Instantiate(EnemyPrefab, EnemySpawner.position, Quaternion.identity);
         }
     }
