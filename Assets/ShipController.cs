@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Runtime.CompilerServices;
 
 public class ShipController : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class ShipController : MonoBehaviour
 
     public float timeBetweenShots = 0.25f;
     float timeSinceLastShot = 0;
+
+    [SerializeField]
+    bool PowerupActive = false;
+    float ptimer = 0;
 
     [SerializeField]
 
@@ -62,6 +67,19 @@ public class ShipController : MonoBehaviour
 
         timeSinceLastShot += Time.deltaTime;
 
+        if (PowerupActive)
+        {
+            ptimer += Time.deltaTime;
+            if (ptimer >= 5f)
+            {
+                PowerupActive = false;
+                ptimer = 0;
+                timeBetweenShots = 0.25f; // Reset to normal
+            }
+        }
+
+
+
         if (Input.GetAxisRaw("Fire1") > 0 && timeSinceLastShot > timeBetweenShots)
         {
             timeSinceLastShot = 0;
@@ -71,7 +89,6 @@ public class ShipController : MonoBehaviour
         {
             currentHealth = 10;
         }
-
 
     }
 
@@ -87,13 +104,13 @@ public class ShipController : MonoBehaviour
                 SceneManager.LoadScene(2);
             }
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
         if (other.tag == "Power")
         {
-            
+            PowerupActive = true;
+            ptimer = 0;
+            timeBetweenShots = 0.05f;
+            Destroy(other.gameObject); // optional
         }
     }
 
