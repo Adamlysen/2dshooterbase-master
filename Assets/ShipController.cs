@@ -54,10 +54,8 @@ public class ShipController : MonoBehaviour
     void Update()
     {
         float xInput = Input.GetAxisRaw("Horizontal");
-        // print(xInput);
 
         float yInput = Input.GetAxisRaw("Vertical");
-        // print(yInput);
 
         Vector2 movement = new Vector2(xInput, yInput) * speed * Time.deltaTime;
 
@@ -110,7 +108,7 @@ public class ShipController : MonoBehaviour
             PowerupActive = true;
             ptimer = 0;
             timeBetweenShots = 0.05f;
-            Destroy(other.gameObject); // optional
+            Destroy(other.gameObject);
         }
     }
 
